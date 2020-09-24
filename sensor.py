@@ -50,10 +50,11 @@ def get_distance():
 
     return distance
 
-
+def writeToDB():
+    print(distance)
 while True:
     distance = get_distance()
-    print(distance)
+    writeToDB()
     if distance <100:
         off(GREEN)
         off(YELLOW)
