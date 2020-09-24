@@ -52,7 +52,7 @@ def get_distance():
 
 def writeToDB():
     dd = round(distance)
-    if dd % 2 == 0:
+    if dd % 5 == 0:
         print(dd)
 while True:
     distance = get_distance()
