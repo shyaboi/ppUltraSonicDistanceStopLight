@@ -49,14 +49,15 @@ def get_distance():
     #print('Distance: {} centimeters'.format(distance))
 
     return distance
-
-def writeToDB():
+count = 0
+def writeToDB(count):
+    count += 1
     dd = round(distance)
-    if dd % 5 == 0:
+    if count % 2 == 0:
         print(dd)
 while True:
     distance = get_distance()
-    writeToDB()
+    writeToDB(count)
     if distance <100:
         off(GREEN)
         off(YELLOW)
