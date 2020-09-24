@@ -53,11 +53,10 @@ count = 0
 def writeToDB(count):
     dd = round(distance)
     if count % 10 == 0:
-        print(dd)
+        print(distance)
 while True:
     distance = get_distance()
     count += 1
-    writeToDB(count)
     if distance <100:
         off(GREEN)
         off(YELLOW)
