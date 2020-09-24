@@ -52,11 +52,11 @@ def get_distance():
 
 def writeToDB():
     dd = round(distance)
-    print(dd)
+    if dd % 2 == 0:
+        print(dd)
 while True:
     distance = get_distance()
-    if distance % 5 == 0:
-        writeToDB()
+    writeToDB()
     if distance <100:
         off(GREEN)
         off(YELLOW)
