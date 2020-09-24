@@ -57,6 +57,7 @@ def writeToDB(count):
 while True:
     distance = get_distance()
     count += 1
+    writeToDB(count)
     if distance <100:
         off(GREEN)
         off(YELLOW)
