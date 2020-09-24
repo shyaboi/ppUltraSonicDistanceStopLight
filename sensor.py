@@ -51,7 +51,8 @@ def get_distance():
     return distance
 
 def writeToDB():
-    print(distance)
+    dd = round(distance)
+    print(dd)
 while True:
     distance = get_distance()
     writeToDB()
