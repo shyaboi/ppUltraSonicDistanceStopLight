@@ -55,7 +55,8 @@ def writeToDB():
     print(dd)
 while True:
     distance = get_distance()
-    writeToDB()
+    if distance % 5 == 0:
+        writeToDB()
     if distance <100:
         off(GREEN)
         off(YELLOW)
