@@ -53,8 +53,8 @@ count = 0
 def writeToDB(count):
     count += 1
     dd = round(distance)
-    if count % 2 == 0:
-        print(dd)
+    if count > 0:
+        print(count)
 while True:
     distance = get_distance()
     writeToDB(count)
