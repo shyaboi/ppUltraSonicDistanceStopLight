@@ -53,7 +53,7 @@ count = 0
 
 def writeToDB(count):
     dataFile = open("rawDump.txt", "a")
-    dataFile.write(distance)
+    dataFile.write(str(distance))
     dataFile.close()
     dd = round(distance)
     if count % 10 == 0:
