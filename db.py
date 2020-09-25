@@ -1,5 +1,4 @@
 import sqlite3, random,json
-from sensor import get_distance
 conn = sqlite3.connect('distanceSensorDataDatabase.db')
 print ("Opened database successfully");
 
@@ -8,7 +7,7 @@ print ("Opened database successfully");
 conn.execute('CREATE TABLE distanceSensorData (ID INT PRIMARY KEY NOT NULL,sensorName TEXT, sensorType TEXT, realData REAL, roundedData INTEGER)')
 def insertData(data):
     ok = random.randint(1, 2001)
-    data = get_distance
+    ok2 = data
     ok3 = random.randint(1, 2001)
     ok4 = random.randint(1, 2001)
     conn.execute(f"INSERT INTO distanceSensorData (ID, sensorName, sensorType, realData, roundedData) \
