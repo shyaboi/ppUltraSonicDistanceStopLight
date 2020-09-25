@@ -52,9 +52,9 @@ def get_distance():
 count = 0
 
 def writeToDB(count):
-    f = open("demofile3.txt", "a")
-    f.write("Woops! I have deleted the content!")
-    f.close()
+    dataFile = open("rawDump.txt", "a")
+    dataFile.write(distance)
+    dataFile.close()
     dd = round(distance)
     if count % 10 == 0:
         print(distance)
