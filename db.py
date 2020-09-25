@@ -5,14 +5,14 @@ print ("Opened database successfully");
 
 
 
-# conn.execute('CREATE TABLE distanceSensorData (ID INT PRIMARY KEY NOT NULL,sensorName TEXT, sensorType TEXT, realData REAL, roundedData INTEGER)')
+conn.execute('CREATE TABLE distanceSensorData (ID INT PRIMARY KEY NOT NULL,sensorName TEXT, sensorType TEXT, realData REAL, roundedData INTEGER)')
 def insertData(data):
     ok = random.randint(1, 2001)
-    ok2 = get_distance
+    data = get_distance
     ok3 = random.randint(1, 2001)
     ok4 = random.randint(1, 2001)
     conn.execute(f"INSERT INTO distanceSensorData (ID, sensorName, sensorType, realData, roundedData) \
-        VALUES ({ok3}, 'd boi', 'HC{ok4} whatevver', {ok2}, {ok})")
+        VALUES ({ok3}, 'd boi', 'HC{ok4} whatevver', {data}, {ok})")
 # print ("Table created successfully");
 print ("Table updated");
 

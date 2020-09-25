@@ -1,6 +1,6 @@
 import RPi.GPIO as GPIO
 import time
-
+from db import insertData
 GPIO.setwarnings(False)
 # doing this first, since we're using a while True.
 GPIO.cleanup()
@@ -52,12 +52,9 @@ def get_distance():
 count = 0
 
 def writeToDB(count):
-    dataFile = open("rawDump.txt", "a")
-    dataFile.write(str(distance))
-    dataFile.close()
     dd = round(distance)
     if count % 10 == 0:
-        print(distance)
+        insertData(distance)
 while True:
     distance = get_distance()
     count += 1
