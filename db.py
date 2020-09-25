@@ -1,4 +1,4 @@
-import sqlite3, random
+import sqlite3, random,json
 
 conn = sqlite3.connect('distanceSensorDataDatabase.db')
 print ("Opened database successfully");
@@ -17,11 +17,7 @@ print ("Table updated");
 
 cursor = conn.execute("SELECT ID, sensorName, sensorType, realData, roundedData from distanceSensorData")
 for row in cursor:
-   print( "ID = ", row[0])
-   print( "sensorName = ", row[1])
-   print ("sensorType = ", row[2])
-   print ("realData = ", row[3])
-   print ("roundedData = ", row[4])
+   print(json.dumps({"ID":row[0],"sensorName":row[1],"sensorType":row[2], "realData":row[3],"roundedData":row[4] }))
 print ("Operation done successfully")
 conn.commit()
 conn.close()
