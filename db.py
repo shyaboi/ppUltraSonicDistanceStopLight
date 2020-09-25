@@ -4,7 +4,7 @@ print ("Opened database successfully");
 
 
 
-conn.execute('CREATE TABLE distanceSensorData (ID INT PRIMARY KEY NOT NULL,sensorName TEXT, sensorType TEXT, realData REAL, roundedData INTEGER)')
+# conn.execute('CREATE TABLE distanceSensorData (ID INT PRIMARY KEY NOT NULL,sensorName TEXT, sensorType TEXT, realData REAL, roundedData INTEGER)')
 def insertData(data):
     ok = random.randint(1, 2001)
     ok2 = data
