@@ -1,5 +1,4 @@
 import time
-from sensor import get_distance, writeToDB
+from sensor import get_distance
 
 get_distance()
-print(writeToDB)

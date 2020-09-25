@@ -50,10 +50,14 @@ def get_distance():
 
     return distance
 count = 0
+
 def writeToDB(count):
+    f = open("demofile3.txt", "a")
+    f.write("Woops! I have deleted the content!")
+    f.close()
     dd = round(distance)
     if count % 10 == 0:
-        return distance
+        print(distance)
 while True:
     distance = get_distance()
     count += 1
