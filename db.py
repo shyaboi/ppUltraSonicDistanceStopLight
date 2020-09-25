@@ -27,4 +27,3 @@ def thging():
 print(thging())
 print ("Operation done successfully")
 conn.commit()
-conn.close()
