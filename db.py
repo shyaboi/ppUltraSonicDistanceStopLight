@@ -16,8 +16,14 @@ print ("Table updated");
 
 
 cursor = conn.execute("SELECT ID, sensorName, sensorType, realData, roundedData from distanceSensorData")
-for row in cursor:
-   print(json.dumps({"ID":row[0],"sensorName":row[1],"sensorType":row[2], "realData":row[3],"roundedData":row[4] }))
+def thging():
+    dumpArr = []
+    for row in cursor:
+        termp = json.dumps([row].copy())
+        dumpArr.insert(len(dumpArr), termp)
+        # ok=json.dumps({"ID":row[0],"sensorName":row[1],"sensorType":row[2], "realData":row[3],"roundedData":row[4] })
+    return dumpArr
+print(thging())
 print ("Operation done successfully")
 conn.commit()
 conn.close()
